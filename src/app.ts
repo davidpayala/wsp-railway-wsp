@@ -2,12 +2,12 @@ import { join } from 'path'
 import { createBot, createProvider, createFlow, addKeyword, utils } from 'node_modules/@builderbot/bot'
 import { MemoryDB as Database } from 'node_modules/@builderbot/bot'
 import { MetaProvider as Provider } from 'node_modules/@builderbot/provider-meta'
-import {
-    JWTTOKEN,
-    NUMBERID, 
-    VERIFYTOKEN,
-    VERSION 
-  } from './config.js'
+
+const JWTTOKEN = process.env.JWTTOKEN ?? 'EAAH7KBbWZCk0BO9Mhmx25ZBhZBnMeXqx48ZAZB1qcBZARhYowE1mcxdzK69XuZARUg2DEbXHYtHN626LkVJ9pxtmPBQO4V3E515QwoKfYdQAF7LTzg6WrEXmZALIJMYqgLujZBtODnlGU1X9pKPl0gZC3Sly110iuQE3aqga5CHiSFUAolkXhcrbEU6tWgqyz8yMgB8j0SoAvaKAppt4KrCgJJZCbYOwkZBbXwYDvSTX30TBSwAZD'
+const NUMBERID = process.env.NUMBERID ?? '456192744242041'
+const VERIFYTOKEN = process.env.VERIFYTOKEN ?? 'Cheza1316$'
+const VERSION = process.env.VERSION ?? 'v20.0'
+
 const PORT = process.env.PORT ?? 3008
 
 const discordFlow = addKeyword<Provider, Database>('doc').addAnswer(
