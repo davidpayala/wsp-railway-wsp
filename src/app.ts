@@ -10,14 +10,6 @@ const JWTTOKEN = process.env.JWTTOKEN ?? 'EAAH7KBbWZCk0BO9Mhmx25ZBhZBnMeXqx48ZAZ
 const NUMBERID = process.env.NUMBERID ?? '456192744242041'
 const VERIFYTOKEN = process.env.VERIFYTOKEN ?? 'Cheza1316$'
 const VERSION = process.env.VERSION ?? 'v20.0'
-// accesos db interna
-const db = await mysql.createConnection({
-    host: process.env.DB_HOST,  // Host proporcionado por Railway
-    user: process.env.DB_USER,  // Usuario de la base de datos
-    password: process.env.DB_PASSWORD,  // Contraseña de la base de datos
-    database: process.env.DB_NAME  // Nombre de la base de datos
-})
-export default db
 
 const PORT = process.env.PORT ?? 3008
 
